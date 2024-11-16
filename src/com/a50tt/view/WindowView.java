@@ -71,13 +71,13 @@ public class WindowView extends JFrame {
 		lblPath1 = new JLabel("Main path:");
 		lblPath1.setPreferredSize(new Dimension((int)(this.getPreferredSize().getWidth()),(int)(20f * heightRatio)));
 		panelTextPaths.add(lblPath1);
-		textPath1 = new JTextField("C:\\Users\\nooko\\Downloads\\dir1");
+		textPath1 = new JTextField("");
 		textPath1.setPreferredSize(new Dimension((int)(this.getPreferredSize().getWidth()),(int)(40f * heightRatio)));
 		panelTextPaths.add(textPath1);
 
 		lblPath2 = new JLabel("Path to compare with:");
 		lblPath2.setPreferredSize(new Dimension((int)(this.getPreferredSize().getWidth()),(int)(20f * heightRatio)));
-		textPath2 = new JTextField("C:\\Users\\nooko\\Downloads\\dir2");
+		textPath2 = new JTextField("");
 		textPath2.setPreferredSize(new Dimension((int)(this.getPreferredSize().getWidth()),(int)(40f * heightRatio)));
 
 		panelTextPaths.setPreferredSize(new Dimension(Math.max(textPath1.getPreferredSize().width, textPath2.getPreferredSize().width), lblPath1.getPreferredSize().height + textPath1.getPreferredSize().height + lblPath2.getPreferredSize().height + textPath2.getPreferredSize().height + ((GridLayout)panelTextPaths.getLayout()).getVgap()));
