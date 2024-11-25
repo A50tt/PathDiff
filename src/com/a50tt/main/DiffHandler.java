@@ -38,18 +38,18 @@ public class DiffHandler {
 				File f2 = new File(mainPathDir2.toString() + f.toString().replace(mainPathDir1, ""));
 				if (!f2.exists()) {
 					str.delete(str.indexOf("</html>"), str.length());
-					str.append("<font color='red'>FILE - only exists in " + currentLastDirectory + " --> </font>" + f.toString() + "</font><br></html>");
+					str.append("<font color='red'>FILE only exists in \"" + currentLastDirectory + "\" --> </font>\"" + f.toString() + "\"</font><br></html>");
 					textLog.setText(str.toString());
 				} else if (f.length() != f2.length()) {
 					str.delete(str.indexOf("</html>"), str.length());
-					str.append("<font color='orange'>FILE - size is different." + " --> </font>" + currentLastDirectory + " = " + f.length() + " B &nbsp;&nbsp;||&nbsp;&nbsp; " + otherLastDirectory + " = " + f2.length() + " B<br></html>");
+					str.append("<font color='orange'>FILE size is different in \"" + currentLastDirectory + "\"</font> --> \"" + f.toString() + "\" <font color='orange'>[" + currentLastDirectory + " = " + f.length() + " B &nbsp;&nbsp;||&nbsp;&nbsp; " + otherLastDirectory + " = " + f2.length() + " B]</font><br></html>");
 					textLog.setText(str.toString());
 				}
 			} else {
 				File d2 = new File(mainPathDir2.toString() + f.toString().replace(mainPathDir1, ""));
 				if (!d2.exists()) {
 					str.delete(str.indexOf("</html>"), str.length());
-					str.append("<font color='red'>DIR  - only exists in " + currentLastDirectory + " --> </font>" + f.toString() + "<br></html>");
+					str.append("<font color='red'>DIR only exists in \"" + currentLastDirectory + "\" --> </font>" + f.toString() + "<br></html>");
 					textLog.setText(str.toString());
 				} else {
 					pathsDiff(f, d2);
